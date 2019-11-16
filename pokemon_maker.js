@@ -34,7 +34,7 @@ for(i = 1; i <= 6; i++){
    for(i = 1; i <= data.types.length; i++){
 	  pokemon_type = "Type " + i + ": " + data.types[i - 1].type.name + " "
           const ulul = document.createElement('ul')
-          ulul.setAttribute('class', 'thicc')
+          ulul.setAttribute('class', 'thiccc')
           ulul.textContent = pokemon_type
           card.appendChild(ulul)
    }

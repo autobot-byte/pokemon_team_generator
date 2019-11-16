@@ -1,3 +1,8 @@
+body {
+  background-color: #002b36;
+  color: #93a1a1;
+}
+
 #root {
   max-width: 1200px;
   margin: 0 auto;
@@ -26,27 +31,42 @@
 
 .bottom-text {
   vertical-align: bottom;
+  color: #b58900;
+}
+
+.thicc {
+  color: #268bd2;
 }
 
 h1 {
-  font-size: 50px;
+  color: #cb4b16;
   font-family: 'pokemon-solid';
+  font-size: 50px;
   text-align: center;
 }
 
 h2 {
+  color: #859900;
+  font-family: 'arcade-classic';
   font-size: 20px;
 }
 
 h3 {
+  font-family: 'arcade-classic';
   padding-left: 35%;
 }
 
+.type {
+  color: #268bd2;
+}
+
 li {
+  font-family: 'arcade-classic';
   text-align: center;
 }
 
 ul {
+  font-family: 'arcade-classic';
   padding-left: 35%;
 }
 
@@ -73,8 +93,12 @@ ul {
   src: url('pokemon-solid.ttf');
 }
 
-
 @font-face {
   font-family: 'pokemon-hollow';
   src: url('pokemon-hollow.ttf');
+}
+
+@font-face {
+  font-family: 'arcade-classic';
+  src: url('arcade-classic.ttf');
 }
