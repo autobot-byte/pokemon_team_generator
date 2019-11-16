@@ -12,10 +12,16 @@
   padding: 10px;
 }
 
+.nickname {
+  font-size: 30px;
+}
+
 .pic {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 200px;
+  height: auto;
 }
 
 .bottom-text {
@@ -31,11 +37,15 @@ h2 {
 }
 
 h3 {
-  text-align: center;
+  padding-left: 35%;
 }
 
 li {
   text-align: center;
+}
+
+ul {
+  padding-left: 35%;
 }
 
 @media screen and (min-width: 600px) {
