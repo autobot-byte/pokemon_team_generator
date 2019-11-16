@@ -17,8 +17,11 @@ for(i = 1; i <= 6; i++){
   var data = JSON.parse(this.response)
 
   pokemon_name = data.name
-   for(i = 0; i < data.types; i++)
-  	  pokemon_type += "Type " + i + ": " + data.types[i] + " "
+  temp = ""
+   for(i = 0; i < data.types.length; i++){
+	  temp += "Type " + i + ": " + data.types[i].type.name + " "
+   }
+    pokemon_type = temp
     pokemon_sprite = data.sprites.front_default
 
     const h11 = document.createElement('h1')
