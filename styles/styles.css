@@ -72,6 +72,8 @@ ul {
 
 button {
   display: block;
+  width: 80%;
+  height: 2rem;
   margin-left: auto;
   margin-right: auto;
 }
