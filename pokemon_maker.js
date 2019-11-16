@@ -63,3 +63,7 @@ for(i = 1; i <= 6; i++){
   app.appendChild(card) 
   request.send()
 }
+
+function refresh() {
+  window.location.reload(false)
+}

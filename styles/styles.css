@@ -50,6 +50,12 @@ ul {
   padding-left: 35%;
 }
 
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (min-width: 600px) {
   .card {
     flex: 1 1 calc(50% - 2rem);
