@@ -1,4 +1,4 @@
-names = ["Ben Wang", "Pranay", "Daniel", "Ben Taylor", "Ben Sun", "Pusheen", "Connie", "Eric", "Eb", "prydt", "tiffaniffaniff"]
+names = ["Ben Wang", "Pranay", "Daniel", "Eb", "prydt", "tiffaniffaniff", "marshmallow", "polymatter", "3b1b", "tams", "orange"]
 const app = document.getElementById('root')
 for(i = 1; i <= 6; i++){
   var request = new XMLHttpRequest()
