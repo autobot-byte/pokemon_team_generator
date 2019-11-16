@@ -29,7 +29,9 @@
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 50px;
+  font-family: 'pokemon-solid';
+  text-align: center;
 }
 
 h2 {
@@ -64,4 +66,15 @@ ul {
   .card {
     flex: 1 1 calc(25% - 2rem);
   }
+}
+
+@font-face {
+  font-family: 'pokemon-solid';
+  src: url('pokemon-solid.ttf');
+}
+
+
+@font-face {
+  font-family: 'pokemon-hollow';
+  src: url('pokemon-hollow.ttf');
 }
