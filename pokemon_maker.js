@@ -1,3 +1,4 @@
+names = ["Ben Wang", "Pranay", "Daniel", "Ben Taylor", "Ben Sun", "Pusheen"]
 const app = document.getElementById('root')
 for(i = 1; i <= 6; i++){
   var request = new XMLHttpRequest()
@@ -9,12 +10,20 @@ for(i = 1; i <= 6; i++){
   const card = document.createElement('div')
   card.setAttribute('class', 'card')
 
+  randomNameID = Math.floor(Math.random() * names.length)
+  randomName = names[randomNameID]
+  console.log(randomName)
   randomPokemon = Math.floor((Math.random() * 800) + 1)
   randomString = 'https://pokeapi.co/api/v2/pokemon/' + randomPokemon
   request.open('GET', randomString, true)
   request.onload = function() {
     // Begin accessing JSON data here
   var data = JSON.parse(this.response)
+
+  const h22 = document.createElement('h2')
+  h22.setAttribute('class', 'thicc')
+  h22.textContent = randomName
+  card.appendChild(h22)
 
   pokemon_name = data.name
   const h33 = document.createElement('h3')
