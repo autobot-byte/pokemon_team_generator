@@ -2,12 +2,24 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-warp: wrap;
+  flex-wrap: wrap;
 }
 
 .card {
   margin: 1rem;
   border: 1px solid gray;
+  min-height: 75%;
+  padding: 10px;
+}
+
+.pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom-text {
+  vertical-align: bottom;
 }
 
 h1 {
@@ -17,6 +29,15 @@ h1 {
 h2 {
   font-size: 20px;
 }
+
+h3 {
+  text-align: center;
+}
+
+li {
+  text-align: center;
+}
+
 @media screen and (min-width: 600px) {
   .card {
     flex: 1 1 calc(50% - 2rem);
@@ -31,6 +52,6 @@ h2 {
 
 @media screen and (min-width: 1080px) {
   .card {
-    flex: 1 1 calc(16% - 2rem);
+    flex: 1 1 calc(25% - 2rem);
   }
 }

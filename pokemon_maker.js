@@ -17,30 +17,28 @@ for(i = 1; i <= 6; i++){
   var data = JSON.parse(this.response)
 
   pokemon_name = data.name
-  temp = ""
-   for(i = 0; i < data.types.length; i++){
-	  temp += "Type " + i + ": " + data.types[i].type.name + " "
+  const h33 = document.createElement('h3')
+  h33.textContent = pokemon_name
+  card.appendChild(h33)
+  h33.setAttribute('class', 'thicc')
+
+   for(i = 1; i <= data.types.length; i++){
+	  pokemon_type = "Type " + i + ": " + data.types[i - 1].type.name + " "
+          const ulul = document.createElement('ul')
+          ulul.setAttribute('class', 'thicc')
+          ulul.textContent = pokemon_type
+          card.appendChild(ulul)
    }
-    pokemon_type = temp
+
     pokemon_sprite = data.sprites.front_default
-
-    const h11 = document.createElement('h1')
-    h11.textContent = pokemon_name
-    card.appendChild(h11)
-    h11.setAttribute('class', 'thicc')
-
-    const h22 = document.createElement('h2')
-    h22.textContent = pokemon_type
-    card.appendChild(h22)
-    h22.setAttribute('class', 'thicc')
-
     const img = document.createElement('img')
     img.src = pokemon_sprite
     card.appendChild(img)
-    img.setAttribute('class', 'thicc')
+    img.setAttribute('class', 'pic')
 
-    const moves = document.createElement('h1')
+    const moves = document.createElement('h3')
     moves.textContent = "Moves: "
+    moves.setAttribute('class', 'bottom-text')
     card.appendChild(moves)
       for(i = 0; i < 4; i++){
         randomNum = Math.floor(Math.random() * data.moves.length)

@@ -1,2 +1,3 @@
 pikachu - 29837
 charmander - 87353
+squirtle - 54227
