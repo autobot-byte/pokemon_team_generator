@@ -48,6 +48,18 @@ html {
   color: #268bd2;
 }
 
+.flavor-text {
+  font-family: 'Open Sans';
+  font-size: 15px;
+  margin-left: 10%;
+}
+
+.frustration {
+  font-family: 'Open Sans';
+  font-size: 20px;
+  margin-left: 10%;
+}
+
 h1 {
   color: #cb4b16;
   font-family: 'pokemon-solid';
