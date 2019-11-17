@@ -1,6 +1,10 @@
-names = ["Ben Wang", "Pranay", "Daniel", "Eb", "prydt", "tiffaniffaniff", "marshmallow", "polymatter", "3b1b", "tams", "orange", "Austin", "Dustin", "Choinut", "WBNE", "Minecraft", "cup", "table", "fork", "computer", "Uwu-man", "OwO-woman", "shorty", "Wolfie", "Tookie", "Foxie", "Brad", "Pitt", "Ganon", "Roy", "Kirby", "Firey", "R.O.B", "Sonic", "horse", "Ben Taylor", "Ben Sun", "Kelly Liu", "CarDar", "Socks", "Dongle", "Grasshawk", "Rock", "Jingle", "Bucket", "Watermelon", "Truck", "Boomer", "Hack", "Hellong", "Jay Park", "Evan Carlisie", "Anthony Zhou", "Preston Wong" ] 
+names = ["Ben Wang", "Pranay", "Daniel", "Eb", "prydt", "tiffaniffaniff", "marshmallow", "polymatter", "3b1b", "tams", "orange", "Austin", "Dustin", "Choinut", "WBNE", "Minecraft", "cup", "table", "fork", "computer", "UwUu-man", "OwO-woman", "shorty", "tally", "Wolfie", "Tookie", "Foxie", "Brad", "Pitt", "Ganon", "Roy", "Kirby", "Firey", "R.O.B", "Sonic", "horse", "Ben Taylor", "Ben Sun", "Kelly Liu", "CarDar", "Socks", "Dongle", "Grasshawk", "Rock", "Jingle", "Bucket", "Watermelon", "Truck", "Boomer", "Hack", "Hellong", "Jay Park", "Evan Carlisie", "Anthony Zhou", "Preston Wong" ] 
 
 const app = document.getElementById('root')
+
+//NEW
+pickedNames = []
+
 for(i = 1; i <= 6; i++){
   var request = new XMLHttpRequest()
   pokemon_name = ""
@@ -13,6 +17,7 @@ for(i = 1; i <= 6; i++){
 
   randomNameID = Math.floor(Math.random() * names.length)
   randomName = names[randomNameID]
+  pickedNames.push(randomName)
 
   h22 = document.createElement('h2')
   h22.setAttribute('class', 'nickname')
@@ -38,7 +43,6 @@ for(i = 1; i <= 6; i++){
           ulul.textContent = pokemon_type
           card.appendChild(ulul)
           if(data.types.length == 1) {
-	    console.log("ASDF")
             ewe = document.createElement('ul')
             ewe.setAttribute('class', 'thiccc')
             ewe.textContent = " ‏‏‎ "
@@ -69,6 +73,23 @@ for(i = 1; i <= 6; i++){
   }
   app.appendChild(card) 
   request.send()
+}
+//NEW
+const flavor = document.getElementById('flavor')
+for(i = 0; i < 6; i++) {
+	randomNumber = Math.floor((Math.random() * 30) + 1)
+	randomString = 'https://pokeapi.co/api/v2/characteristic/' + randomNumber
+	var reeee = new XMLHttpRequest()
+	reeee.open('GET', randomString, true)
+	reeee.onload = function() {
+	var data = JSON.parse(this.response)
+	
+	fl = document.createElement('p')
+	fl.setAttribute('class', 'falvor-text')
+	fl.textContent = randomName
+	flavor.appendChild(fl)
+	}
+reeee.send()
 }
 
 function refresh() {
