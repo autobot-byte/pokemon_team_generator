@@ -2,3 +2,5 @@ pikachu - 29837
 charmander - 87353
 squirtle - 54227
 caterpie - 99427
+weedle - 18327
+ratatta - 67700
