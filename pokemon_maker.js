@@ -76,16 +76,24 @@ for(i = 1; i <= 6; i++){
 }
 //NEW
 frustration = ["this piece of garbage exists", "xml requests can go send themselves away", "that insomniac cookie was really good", "don't ask me to draw anything. ANYTHING", "as long as it isn't a magikarp it's fine", "why don't they have a mechanical keyboard pokemon yet?", "it really likes to hardcode things", "it still attends the CSO workshops to this day", "it's a potato in disguise", "it could be a racoon"]
+flavor_text = ["They like to nap a lot", "Eating is one of its hobbies", "They were once was a pro League player... now they're washed up", "During its prime it was known to code at 30 errors a second", "They have a crippling addiction to mechanical keyboards", "Back when they were in undergrad, they decided to not wear goggles in chem lab", "Record holder for Bowser's Big Bean Burrito", " is fren", "Secretly a furry", "Secretly a scalie", "Occasionally uwu's and owo's to the dismay of its friends", "Was popular in high school"]
 const flavor = document.getElementById('flavor')
 for(i = 0; i < 6; i++) {
-	random = Math.floor(Math.random() * frustration.length)
+	random = Math.floor(Math.random() * flavor_text.length)
 
 	fl = document.createElement('p')
 	fl.setAttribute('class', 'flavor-text')
-	fl.textContent = (pickedNames[i] + ": " + frustration[i])
+	fl.textContent = (pickedNames[i] + ": " + flavor_text[i])
 	console.log(i)
 	flavor.appendChild(fl)
 }
+
+const anger = document.getElementById('stages-of-grief')
+dat_manip_doe = Math.floor(Math.random() * frustration.length)
+piece_of_garbage = document.createElement('h2')
+piece_of_garbage.setAttribute('class', 'frustration')
+piece_of_garbage.textContent = "A not-so-wise man B. Wang once said: " + frustration[dat_manip_doe]
+anger.appendChild(piece_of_garbage)
 
 function refresh() {
   window.location.reload(false)
