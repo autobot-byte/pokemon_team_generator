@@ -61,8 +61,6 @@ html {
 }
 
 .spheal {
-  font-family: 'Open Sans';
-  font-size: 15px;
   margin-left: 10%;
 }
 
@@ -96,6 +94,10 @@ li {
 ul {
   font-family: 'arcade-classic';
   padding-left: 35%;
+}
+
+p {
+  font-family: 'Open Sans';
 }
 
 button {
