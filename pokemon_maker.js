@@ -1,4 +1,4 @@
-names = ["Ben Wang", "Pranay", "Daniel", "Eb", "prydt", "tiffaniffaniff", "marshmallow", "polymatter", "3b1b", "tams", "orange", "Austin", "Dustin", "Choinut", "WBNE", "Minecraft", "cup", "table", "fork", "computer", "UwUu-man", "OwO-woman", "shorty", "tally", "Wolfie", "Tookie", "Foxie", "Brad", "Pitt", "Ganon", "Roy", "Kirby", "Firey", "R.O.B", "Sonic", "horse", "Ben Taylor", "Ben Sun", "Kelly Liu", "CarDar", "Socks", "Dongle", "Grasshawk", "Rock", "Jingle", "Bucket", "Watermelon", "Truck", "Boomer", "Hack", "Hellong", "Jay Park", "Evan Carlisie", "Anthony Zhou", "Preston Wong" ] 
+names = ["Ben Wang", "Pranay", "Daniel", "Eb", "prydt", "tiffaniffaniff", "marshmallow", "polymatter", "3b1b", "tams", "orange", "Austin", "Dustin", "Choinut", "WBNE", "Minecraft", "cup", "table", "fork", "computer", "UwU-man", "OwO-woman", "shorty", "tally", "Wolfie", "Tookie", "Foxie", "Brad", "Pitt", "Ganon", "Roy", "Kirby", "Firey", "R.O.B", "Sonic", "horse", "Ben Taylor", "Ben Sun", "Kelly Liu", "CarDar", "Socks", "Dongle", "Grasshawk", "Rock", "Jingle", "Bucket", "Watermelon", "Truck", "Boomer", "Hack", "Hellong", "Jay Park", "Evan Carlisie", "Anthony Zhou", "Preston Wong" ] 
 
 const app = document.getElementById('root')
 
@@ -76,20 +76,29 @@ for(i = 1; i <= 6; i++){
 }
 //NEW
 const flavor = document.getElementById('flavor')
+potato = ""
+lameString = ["A", "b", "c", "d", "e", "f"]
 for(i = 0; i < 6; i++) {
+	dumbdumb = pickedNames[i]
 	randomNumber = Math.floor((Math.random() * 30) + 1)
 	randomString = 'https://pokeapi.co/api/v2/characteristic/' + randomNumber
 	var reeee = new XMLHttpRequest()
 	reeee.open('GET', randomString, true)
 	reeee.onload = function() {
 	var data = JSON.parse(this.response)
-	
-	fl = document.createElement('p')
-	fl.setAttribute('class', 'falvor-text')
-	fl.textContent = randomName
-	flavor.appendChild(fl)
+	potato = data.descriptions[1].description
+	lameString.push(potato)
 	}
 reeee.send()
+work()
+}
+function work() {
+for(i = 0; i < 6; i++) {
+	fl = document.createElement('p')
+	fl.setAttribute('class', 'flavor-text')
+	fl.textContent = (pickedNames[i] + ": " + lameString[i])
+	flavor.appendChild(fl)
+}
 }
 
 function refresh() {
