@@ -3,6 +3,17 @@ body {
   color: #93a1a1;
 }
 
+/* Hide scroll bars */
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}  
+
 #root {
   max-width: 1200px;
   margin: 0 auto;
