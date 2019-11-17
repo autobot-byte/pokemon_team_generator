@@ -75,30 +75,16 @@ for(i = 1; i <= 6; i++){
   request.send()
 }
 //NEW
+frustration = ["this piece of garbage exists", "xml requests can go send themselves away", "that insomniac cookie was really good", "don't ask me to draw anything. ANYTHING", "as long as it isn't a magikarp it's fine", "why don't they have a mechanical keyboard pokemon yet?", "it really likes to hardcode things", "it still attends the CSO workshops to this day", "it's a potato in disguise", "it could be a racoon"]
 const flavor = document.getElementById('flavor')
-potato = ""
-lameString = ["A", "b", "c", "d", "e", "f"]
 for(i = 0; i < 6; i++) {
-	dumbdumb = pickedNames[i]
-	randomNumber = Math.floor((Math.random() * 30) + 1)
-	randomString = 'https://pokeapi.co/api/v2/characteristic/' + randomNumber
-	var reeee = new XMLHttpRequest()
-	reeee.open('GET', randomString, true)
-	reeee.onload = function() {
-	var data = JSON.parse(this.response)
-	potato = data.descriptions[1].description
-	lameString.push(potato)
-	}
-reeee.send()
-work()
-}
-function work() {
-for(i = 0; i < 6; i++) {
+	random = Math.floor(Math.random() * frustration.length)
+
 	fl = document.createElement('p')
 	fl.setAttribute('class', 'flavor-text')
-	fl.textContent = (pickedNames[i] + ": " + lameString[i])
+	fl.textContent = (pickedNames[i] + ": " + frustration[i])
+	console.log(i)
 	flavor.appendChild(fl)
-}
 }
 
 function refresh() {
