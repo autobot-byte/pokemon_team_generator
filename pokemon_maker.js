@@ -95,3 +95,15 @@ reeee.send()
 function refresh() {
   window.location.reload(false)
 }
+
+const button = document.getElementById('button');
+button.onmouseover = logMouseOver;
+button.onmouseout = logMouseOut;
+
+function logMouseOver() {
+  document.getElementById('button').style.background = '#073642';
+}
+
+function logMouseOut() {
+  document.getElementById('button').style.background = '#002b36';
+}

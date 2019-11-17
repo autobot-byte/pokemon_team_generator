@@ -7,12 +7,11 @@ body {
 html {
   overflow: scroll;
   overflow-x: hidden;
-
 }
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
-}  
+}
 
 #root {
   max-width: 1200px;
@@ -23,7 +22,7 @@ html {
 
 .card {
   margin: 1rem;
-  border: 1px solid gray;
+  border: 1px solid #2aa198;
   min-height: 75%;
   padding: 10px;
 }
@@ -82,6 +81,9 @@ ul {
 }
 
 button {
+  border-color: #2aa198;
+  color: #cb4b16;
+  background-color: #002b36;
   display: block;
   font-family: 'arcade-classic';
   font-size: 30px;
