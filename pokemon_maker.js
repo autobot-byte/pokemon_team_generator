@@ -3,6 +3,7 @@ names = ["Ben Wang", "Pranay", "Daniel", "Eb", "prydt", "tiffaniffaniff", "marsh
 const app = document.getElementById('root')
 const NUMBER = 6;
 var foo = 0;
+var combinedName = "";
 
 //NEW
 pickedNames = []
@@ -25,6 +26,7 @@ for(var i = 1; i <= NUMBER; i++){
   h22 = document.createElement('h2')
   h22.setAttribute('class', 'nickname')
   h22.textContent = randomName
+  combinedName += randomName.substr(Math.floor(Math.random() * randomName.length), Math.floor(Math.random() * randomName.length))
   card.appendChild(h22)
 
   randomPokemon = Math.floor((Math.random() * 800) + 1)
@@ -124,9 +126,6 @@ function logMouseOut() {
   document.getElementById('button').style.background = '#002b36';
 }
 
-const mix = document.createElement('div')
-mix.setAttribute('class', 'card')
-
 // Wolfram
 function wolfram() {
   for (var i = 0; i < NUMBER; i++)
@@ -135,9 +134,22 @@ function wolfram() {
   }
   var string = averages.join(',')
   var request = new XMLHttpRequest()
-  request.open('GET', "https://www.wolframcloud.com/obj/1a00bd3c-f2ea-4472-8561-d2d73b5fa6af?x=" + string, true)
+  request.open('GET', 'https://www.wolframcloud.com/obj/1a00bd3c-f2ea-4472-8561-d2d73b5fa6af?x=' + string, true)
   request.onload = function() {
     var closest = this.responseText.substring(this.responseText.indexOf(':') + 1, this.responseText.length - 2)
+
+    // Display new card
+    const mix = document.createElement('div')
+    mix.setAttribute('class', 'card')
+    app.append(mix)
+    const title = document.createElement('h2')
+    title.setAttribute('class', 'nickname')
+    title.style.textAlign = 'center'
+    title.style.fontFamily = 'pokemon-solid'
+    title.textContent = 'Your team "' + combinedName + '" is closest in strength to ' + closest + '...'
+    title.style.color = '#d33682'
+    mix.appendChild(title)
+
   }
   request.send()
 }
